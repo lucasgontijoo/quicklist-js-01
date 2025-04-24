@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--background-primary);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header img {
+    margin-right: 7px;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bold;
+    color: var(--content-secondary);
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.control p {
+    color: var(--color-brand);
+}
+
+.add-item {
+    /* width: 627px; */
+    /* height: 44px; */
+    display: flex;
+    flex-direction: row;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+.add-item input, button{
+    padding: 0.68rem;
+    border-radius: .75rem;  /* 12px */
+}
+
+.add-item input {
+    border: 2px solid var(--border-primary);
+    width: 451px; /* Revisar linha quando for ficar responsivo */
+    margin-right: 1rem;
+}
+
+.btn-add-item {
+    background-color: #ca3884;
+    color: var(--always-white);
+    border: none;
+    width: 160px; /* Revisar linha quando for ficar responsivo */
+}
+
+.list-items li {
+    list-style-type: none;
+    background-color: var(--always-white);
+    margin: .75rem 0;
+    width: 627px; /* Revisar linha quando for ficar responsivo */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-item-init-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.list-item-init-content input {
+    margin-right: 12px;
+}
+
+.icon-delete {
+    background-color: yellow;
+}

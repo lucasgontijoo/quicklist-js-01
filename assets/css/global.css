@@ -1,0 +1,20 @@
+:root { 
+    /* Background */
+    --background-primary: #F4F5FB;
+    --background-secondary: #FFF;
+
+    /* Color */
+    --color-brand: #CA3884;
+    --color-brand-hover: #A52C6B;
+    --color-danger: #C93847;
+
+    /* Content */
+    --content-primary: #080B12;
+    --content-secondary: #374151;
+    --content-tertiary: #9CA3AF;
+    --always-white: #FFF;
+
+    /* Border */
+    --border-primary: #D1D5DB; 
+    --border-hover: #B9C2D0; 
+}
