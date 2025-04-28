@@ -63,11 +63,29 @@ body {
     margin-right: 1rem;
 }
 
+.add-item input:hover {
+    border: 2px solid var(--border-hover);
+}
+
+.add-item input:active {
+    border: 2px solid var(--color-brand);
+    outline: none;
+}
+
+.add-item input:focus {
+    border: 2px solid var(--color-brand);
+    outline: none;
+}
+
 .btn-add-item {
     background-color: #ca3884;
     color: var(--always-white);
     border: none;
     width: 160px; /* Revisar linha quando for ficar responsivo */
+}
+
+.btn-add-item:hover {
+    background-color: var(--color-brand-hover);
 }
 
 .list-items li {
@@ -87,6 +105,11 @@ body {
 
 .list-item-init-content input {
     margin-right: 12px;
+    border: 2px solid var(--border-primary);
+}
+
+.list-item-init-content input:hover {
+    border: 2px solid yellow;
 }
 
 .icon-delete {
