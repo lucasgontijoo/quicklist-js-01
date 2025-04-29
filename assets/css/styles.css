@@ -11,8 +11,11 @@ html, body {
 }
 
 body {
-    font-family: "Inter", sans-serif;
     background-color: var(--background-primary);
+}
+
+body *{
+    font-family: "Inter", sans-serif;
 }
 
 .header {
@@ -36,7 +39,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
+}
+
+.control1 {
+    margin-top: 3.6rem;
+    width: 45%;
+    margin-bottom: 2.75rem;
 }
 
 .control1 p {
@@ -46,12 +56,6 @@ body {
 
 .control1 h2 {
     font-size: 1.5rem;
-}
-
-.control1 {
-    margin-top: 3.6rem;
-    width: 45%;
-    margin-bottom: 2.75rem;
 }
 
 .control2 {
@@ -76,10 +80,6 @@ body {
     font-size: 1rem;  
 }
 
-.add-item button {
-    width: 10rem;
-}
-
 .add-item input {
     border: 2px solid var(--border-primary);
     margin-right: 1rem;
@@ -101,8 +101,13 @@ body {
     outline: none;
 }
 
+.add-item input:focus::placeholder {
+    color: var(--always-black);
+}
+
 .btn-add-item {
-    background-color: #ca3884;
+    width: 10rem;
+    background-color: var(--color-brand);
     color: var(--always-white);
     border: none;
 }
@@ -133,9 +138,63 @@ body {
 
 .list-item-init-content input {
     margin-right: 12px;
+    appearance: none;
+    border: 2px solid var(--border-primary);
+    border-radius: 35%;
+    width: 1.2rem;
+    height: 1.2rem;
+    display: flex;
+    align-self: center;
+}
+
+.list-item-init-content input:hover {
+    border: 2px solid var(--border-hover);
+    cursor: pointer;
+}
+
+.list-item-init-content input:checked {
+    background-color: var(--color-brand);
+    border: 2px solid var(--color-brand);
+    cursor: pointer;
 }
 
 .list-item-init-content label {
     display: flex;
     align-items: center;
+}
+
+@media screen and (max-width: 890px){
+    .header {
+        display: none;
+    }
+
+    .control1, .add-item {
+        width: 80%;
+    }
+
+    .add-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .add-item input {
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+
+    .btn-add-item, .list-items {
+        width: 100%;
+    }
+
+    .list-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .list-items li {
+        width: 80%;
+        margin-bottom: 0;
+    }
 }
