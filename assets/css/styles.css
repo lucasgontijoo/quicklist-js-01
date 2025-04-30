@@ -49,6 +49,10 @@ body *{
     margin-bottom: 2.75rem;
 }
 
+.control1 a{
+    text-decoration: none;
+}
+
 .control1 p {
     color: var(--color-brand);
     margin-bottom: 1rem;
@@ -161,6 +165,12 @@ body *{
 .list-item-init-content label {
     display: flex;
     align-items: center;
+}
+
+.icon-delete:hover {
+    cursor: pointer;
+    background-color: var(--border-hover);
+    border-radius: .75rem;
 }
 
 @media screen and (max-width: 890px){
