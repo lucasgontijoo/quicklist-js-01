@@ -1,3 +1,5 @@
+const itens = []
+
 const form = document.querySelector('.add-item')
 const input = document.querySelector('#input-add-item')
 const ul = document.querySelector('.list-items')
@@ -15,7 +17,7 @@ form.addEventListener('submit', (event) => {
     labelLi.innerText = inputValue
     const imgLi = document.createElement('img')
     imgLi.src = './assets/img/icon_delete.svg'
-    imgLi.classList.add('icon-delete')
+    imgLi.id = 'icon-delete'
 
     if (inputValue == "") {
         alert("Não é possível adicionar um produto sem nome.")
@@ -25,23 +27,13 @@ form.addEventListener('submit', (event) => {
         div.append(inputCheck, labelLi)
         
         input.value = ""
+        itens.push(inputValue)
     }
+
+    
+    imgLi.addEventListener('click', () => {
+        console.log(itens)
+    })
+
 })
 
-const deleteIcon = document.querySelector('.icon-delete')
-
-deleteIcon.addEventListener('click', () => {
-    const rmInputCheck = document.getElementsByTagName('input')
-    const rmLabelLi = document.getElementsByTagName('label')
-    const rmImgLi = document.getElementsByTagName('img')
-    const rmDiv = document.getElementsByTagName('div')
-    const rmNewLi = document.getElementsByTagName('li')
-
-    // rmDiv.removeChild(rmImgLi)
-    rmDiv.removeChild(rmLabelLi)
-
-    rmNewLi.removeChild(rmDiv)
-    rmNewLi.removeChild(rmImgLi)
-
-    ul.removeChild(rmNewLi)
-})
