@@ -181,7 +181,6 @@ body *{
     padding: .75rem;
     border-radius: .75rem;
     justify-content: space-between;
-    display: none;
     margin: 2.25rem 0;
 }
 
@@ -192,6 +191,10 @@ body *{
 
 .alert p {
     margin-left: .5rem;
+}
+
+.hidden {
+    display: none;
 }
 
 @media screen and (max-width: 890px){
