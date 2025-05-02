@@ -173,12 +173,33 @@ body *{
     border-radius: .75rem;
 }
 
+.alert {
+    display: flex;
+    background-color: var(--color-danger);
+    width: 45%;
+    color: var(--always-white);
+    padding: .75rem;
+    border-radius: .75rem;
+    justify-content: space-between;
+    display: none;
+    margin: 2.25rem 0;
+}
+
+.alert-div-01 {
+    display: flex;
+    flex-direction: row;
+}
+
+.alert p {
+    margin-left: .5rem;
+}
+
 @media screen and (max-width: 890px){
     .header {
         display: none;
     }
 
-    .control1, .add-item {
+    .control1, .add-item, .alert {
         width: 80%;
     }
 

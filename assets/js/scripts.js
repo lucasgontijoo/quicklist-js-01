@@ -7,6 +7,7 @@ form.addEventListener('submit', (event) => {
 
     let inputValue = input.value
     const newLi = document.createElement('li')
+    newLi.id = 'newLi'
     const div = document.createElement('div')
     div.classList.add('list-item-init-content')
     const inputCheck = document.createElement('input')
@@ -29,12 +30,7 @@ form.addEventListener('submit', (event) => {
 })
 
 const deleteIcon = document.querySelector('.icon-delete')
-
-deleteIcon.addEventListener('click', (event) => {
-    event.preventDefault()
-    console.log('teste')
-
-    ul.removeChild(newLi)
-    newLi.remove(div, imgLi)
-    div.remove(inputCheck, labelLi)
+    
+deleteIcon.addEventListener('click', () => {
+    
 })
