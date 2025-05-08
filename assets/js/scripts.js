@@ -9,7 +9,7 @@ form.addEventListener('submit', (event) => {
     event.preventDefault()
 
     let inputValue = input.value
-    const newLi = document.createElement('li')
+    let newLi = document.createElement('li')
     const div = document.createElement('div')
     div.classList.add('list-item-init-content')
     const inputCheck = document.createElement('input')
@@ -18,17 +18,13 @@ form.addEventListener('submit', (event) => {
     labelLi.textContent = inputValue
     const imgLi = document.createElement('img')
     imgLi.src = './assets/img/icon_delete.svg'
-    imgLi.id = 'icon-delete'
+    imgLi.classList.add('icon-delete')
     aviso.classList.add('hidden')
-
-    for (let i = 0; i < itens.length; i++) {
-        if(inputValue == itens[i]) {
-            alert("O item já existe na lista e por isso, não pode ser adicionada.")
-        }
-    }
 
     if (inputValue == "") {
         alert("Não é possível adicionar um produto sem nome.")
+    } else if(itens.includes(inputValue)) {
+        alert("O item já existe na lista e por isso, não pode ser adicionado.")
     } else {
         ul.appendChild(newLi)
         newLi.append(div, imgLi)
@@ -39,9 +35,8 @@ form.addEventListener('submit', (event) => {
 
     imgLi.addEventListener('click', () => {
         for (let i = 0; i < itens.length; i++) {
-            if (inputValue == labelLi.textContent) {
+            if (itens[i] == labelLi.textContent) {
                 itens.splice(i, 1)
-                alert('SE FUDE')
                 ul.removeChild(newLi)
                 aviso.classList.remove('hidden')
             } 
